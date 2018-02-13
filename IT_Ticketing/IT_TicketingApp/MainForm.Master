@@ -1,0 +1,126 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MainForm.master.vb" Inherits="IT_TicketingApp.MainForm" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 561px;
+        }
+        .style2
+        {
+            height: 60px;
+        }
+        .style3
+        {
+            width: 400px;
+            height: 54px;
+        }
+        .style4
+        {
+            width: 100%;
+        }
+        .style5
+        {
+            height: 22px;
+        }
+        .style7
+        {
+        }
+        .style8
+        {
+            height: 22px;
+            width: 99px;
+        }
+    </style>
+</head>
+<body>
+    <div align="center">
+    <form id="form1" runat="server" 
+    style="border: thick groove #000080; width: 850px;">
+       <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <telerik:RadSkinManager ID="RadSkinManager1" runat="server">
+    </telerik:RadSkinManager>
+    <div align="left" style="height: 61px; width: 845px">
+    
+        <table bgcolor="#333399" class="style1" frame="box" 
+            style="border: thin groove #000000; width: 845px;">
+            <tr>
+                <td align="left" bgcolor="#333399" class="style2" 
+                    
+                    
+                    style="font-family: Arial; font-size: xx-large; font-weight: bold; font-style: normal; color: #FFFFFF; background-image: url('/Resources/banner.gif');" >
+                    &nbsp;&nbsp;&nbsp;&nbsp; 
+                    </td>
+            </tr>
+        </table>
+        </div>
+       
+    <div align="center" style="width: 842px; height: 39px; margin-top: 8px;">
+        <table class="style4">
+            <tr>
+                <td align="right" class="style8" 
+                    
+                    style="font-size: 14px; font-style: italic; text-transform: capitalize; font-variant: normal; font-weight: normal; empty-cells: show; font-family: Calibri;">
+       
+        <asp:Label ID="Label1" runat="server" Text="Welcome to :"></asp:Label>
+                </td>
+                <td align="left" class="style5" 
+                    style="font-size: 14px; clip: rect(auto, auto, auto, auto); margin-left: 10px; font-family: Calibri; font-style: italic;">
+       <asp:Label ID="lblLoginName" runat="server" Text="Label" ></asp:Label>
+       
+                </td>
+            </tr>
+            <tr>
+                <td class="style7" colspan="2">
+       
+            <telerik:RadMenu ID="RadMenu1" runat="server" Skin="Windows7" 
+           
+                        
+                        
+                        style="top: -1px; left: 2px; width: 100%; z-index:1;height: 27px; margin-top: 0px; margin-bottom: 0px;" BorderStyle="Double" 
+                Font-Bold="True" >
+                <Items>
+                    <telerik:RadMenuItem runat="server" Text="Home"  NavigateUrl="~/Home.aspx" 
+                        Font-Bold="True"> 
+                    </telerik:RadMenuItem>
+                    <telerik:RadMenuItem runat="server" Text="Add Complain" NavigateUrl="~/AddComplain.aspx" Font-Bold="True">
+                    </telerik:RadMenuItem>
+                    <telerik:RadMenuItem runat="server" Text="View Complain" 
+                        NavigateUrl="~/FrmSearch.aspx" Font-Bold="True">
+                    </telerik:RadMenuItem>
+                    <telerik:RadMenuItem runat="server" Text="Admin" 
+                        NavigateUrl="~/AddComplain.aspx" Font-Bold="True">
+                    </telerik:RadMenuItem>
+                    <telerik:RadMenuItem runat="server" Text="Log Out" NavigateUrl="~/LoginForm.aspx" Font-Bold="True">
+                    </telerik:RadMenuItem>
+                </Items>
+                <DefaultGroupSettings Flow="Horizontal" Width="1340px" />
+            </telerik:RadMenu>
+     
+                </td>
+            </tr>
+        </table>
+        </div>
+     
+        <br />
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            <div style="border: medium groove #000080; height: 29px; font-family: Arial; font-size: small; font-weight: normal; font-style: normal; color: #FFFFFF; background-color: #000080; width: 840px;" 
+        align="center">
+    Copyright © 2015 Multinet Pakistan. All Rights Reserved
+            </div>
+        
+        </asp:ContentPlaceHolder>
+    <br />
+    </form>
+    </div>
+</body>
+</html>

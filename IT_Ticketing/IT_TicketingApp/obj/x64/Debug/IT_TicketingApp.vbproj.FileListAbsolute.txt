@@ -1,0 +1,2 @@
+D:\Liaqat Data D\Project Backup\IT_Ticketing\IT_Ticketing\IT_TicketingApp\obj\x64\Debug\IT_TicketingApp.Resources.resources
+D:\Liaqat Data D\Project Backup\IT_Ticketing\IT_Ticketing\IT_TicketingApp\obj\x64\Debug\IT_TicketingApp.vbproj.GenerateResource.Cache

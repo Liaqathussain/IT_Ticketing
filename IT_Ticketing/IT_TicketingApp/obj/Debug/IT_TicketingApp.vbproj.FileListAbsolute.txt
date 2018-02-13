@@ -1,0 +1,26 @@
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\IT_Ticketing\IT_TicketingApp\bin\IT_TicketingApp.dll
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\IT_Ticketing\IT_TicketingApp\bin\IT_TicketingApp.pdb
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\IT_Ticketing\IT_TicketingApp\bin\IT_TicketingApp.xml
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\IT_Ticketing\IT_TicketingApp\obj\Debug\IT_TicketingApp.vbprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\IT_Ticketing\IT_TicketingApp\obj\Debug\IT_TicketingApp.Resources.resources
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\IT_Ticketing\IT_TicketingApp\obj\Debug\IT_TicketingApp.vbproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\IT_Ticketing\IT_TicketingApp\obj\Debug\IT_TicketingApp.dll
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\IT_Ticketing\IT_TicketingApp\obj\Debug\IT_TicketingApp.xml
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\IT_Ticketing\IT_TicketingApp\obj\Debug\IT_TicketingApp.pdb
+E:\Sami Abbas\Multinet Project\IT_Ticketing\IT_TicketingApp\bin\IT_TicketingApp.dll
+E:\Sami Abbas\Multinet Project\IT_Ticketing\IT_TicketingApp\bin\IT_TicketingApp.pdb
+E:\Sami Abbas\Multinet Project\IT_Ticketing\IT_TicketingApp\bin\IT_TicketingApp.xml
+E:\Sami Abbas\Multinet Project\IT_Ticketing\IT_TicketingApp\obj\Debug\IT_TicketingApp.vbprojResolveAssemblyReference.cache
+E:\Sami Abbas\Multinet Project\IT_Ticketing\IT_TicketingApp\obj\Debug\IT_TicketingApp.Resources.resources
+E:\Sami Abbas\Multinet Project\IT_Ticketing\IT_TicketingApp\obj\Debug\IT_TicketingApp.vbproj.GenerateResource.Cache
+E:\Sami Abbas\Multinet Project\IT_Ticketing\IT_TicketingApp\obj\Debug\IT_TicketingApp.dll
+E:\Sami Abbas\Multinet Project\IT_Ticketing\IT_TicketingApp\obj\Debug\IT_TicketingApp.xml
+E:\Sami Abbas\Multinet Project\IT_Ticketing\IT_TicketingApp\obj\Debug\IT_TicketingApp.pdb
+D:\Liaqat Data D\Project Backup\IT_Ticketing\IT_Ticketing\IT_TicketingApp\bin\IT_TicketingApp.dll
+D:\Liaqat Data D\Project Backup\IT_Ticketing\IT_Ticketing\IT_TicketingApp\bin\IT_TicketingApp.pdb
+D:\Liaqat Data D\Project Backup\IT_Ticketing\IT_Ticketing\IT_TicketingApp\bin\IT_TicketingApp.xml
+D:\Liaqat Data D\Project Backup\IT_Ticketing\IT_Ticketing\IT_TicketingApp\obj\Debug\IT_TicketingApp.Resources.resources
+D:\Liaqat Data D\Project Backup\IT_Ticketing\IT_Ticketing\IT_TicketingApp\obj\Debug\IT_TicketingApp.vbproj.GenerateResource.Cache
+D:\Liaqat Data D\Project Backup\IT_Ticketing\IT_Ticketing\IT_TicketingApp\obj\Debug\IT_TicketingApp.dll
+D:\Liaqat Data D\Project Backup\IT_Ticketing\IT_Ticketing\IT_TicketingApp\obj\Debug\IT_TicketingApp.xml
+D:\Liaqat Data D\Project Backup\IT_Ticketing\IT_Ticketing\IT_TicketingApp\obj\Debug\IT_TicketingApp.pdb

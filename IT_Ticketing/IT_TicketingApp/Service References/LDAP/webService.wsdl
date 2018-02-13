@@ -1,0 +1,3499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetCustomerDetailsViaCaller">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerDetailsViaCallerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerDetailsViaCallerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthUser" type="tns:AuthUser" />
+      <s:complexType name="AuthUser">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="Ldap_Authentication">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ldap_AuthenticationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Ldap_AuthenticationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TC5_GETCUSTOMERCIRCUIT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TC5_GETCUSTOMERCIRCUITResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TC5_GETCUSTOMERCIRCUITResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TC5_GETCUSTOMERMAIN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TC5_GETCUSTOMERMAINResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TC5_GETCUSTOMERMAINResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TC5_GETINVOICES">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TC5_GETINVOICESResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TC5_GETINVOICESResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TC5_GETPAYMENTS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TC5_GETPAYMENTSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TC5_GETPAYMENTSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CustomerCredential">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserLogin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CustomerCredentialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCredentialResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserAccountAccess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserAccountAccessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserAccountAccessResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCities">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCitiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCitiesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInfraResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLOB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLOBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLOBResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceUnit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceUnitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceUnitResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBandwidth">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBandwidthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBandwidthResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCiruitsMainDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Infra" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceUnit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bandwidth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IsFavourite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NMNStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LOB" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCiruitsMainDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCiruitsMainDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCircuitCompleteDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignupID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCircuitCompleteDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCircuitCompleteDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewConnectionList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewConnectionListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewConnectionListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConnectionHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignupID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConnectionHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetConnectionHistoryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerMonthlyInvoices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BSSMasterCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="GPMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerMonthlyInvoicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerMonthlyInvoicesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerProdutSummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BSSMasterCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="GPMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerProdutSummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerProdutSummaryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerOutstanding">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BSSMasterCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="GPMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerOutstandingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerOutstandingResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerInovices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GPMasterCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Period" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerInovicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerInovicesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetFavCircuit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignupID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetFavCircuitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetFavCircuitResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUnFavCircuit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignupID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUnFavCircuitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetUnFavCircuitResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerFav">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerFavResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerFavResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvoiceDetailForPDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FROM_DATE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TO_DATE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SOPNUMBE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvoiceDetailForPDFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInvoiceDetailForPDFResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetInitialStatments">
+        <s:complexType />
+      </s:element>
+      <s:element name="BSS_GetInitialStatmentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSS_GetInitialStatmentsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetComplains">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GPID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TicketNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetComplainsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSS_GetComplainsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetinterComplainsDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ComplaintID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetinterComplainsDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSS_GetinterComplainsDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_InsertComplain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SignupID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitailStatementID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="PoCName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PoCNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Remarks" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_InsertComplainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BSS_InsertComplainResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_InsertComplainTroubleShooting">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ComplainID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastMilePowerStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FiberLEDStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceRebooted" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_InsertComplainTroubleShootingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BSS_InsertComplainTroubleShootingResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetComplainsByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ComplaintID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetComplainsByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSS_GetComplainsByIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_ClosedComplain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ComplainID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ComplaintStatusID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerFeedBack" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FurtherAction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Remarks" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_ClosedComplainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BSS_ClosedComplainResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_InsertICSComplain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SignupID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ComplaintTypeID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="LinkStatusID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Remarks" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_InsertICSComplainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BSS_InsertICSComplainResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetLinkStatus">
+        <s:complexType />
+      </s:element>
+      <s:element name="BSS_GetLinkStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSS_GetLinkStatusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetComplaintType">
+        <s:complexType />
+      </s:element>
+      <s:element name="BSS_GetComplaintTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSS_GetComplaintTypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateNewLeads">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Infra" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Poc_Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Poc_ContactNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Poc_Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceUnit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateNewLeadsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateNewLeadsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CustomerCredentialJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserLogin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CustomerCredentialJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCredentialJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserAccountAccessJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserAccountAccessJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserAccountAccessJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegionJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegionJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegionJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCitiesJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCitiesJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCitiesJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfraJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfraJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInfraJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLOBJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLOBJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLOBJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceUnitJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceUnitJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceUnitJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBandwidthJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBandwidthJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBandwidthJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCiruitsMainDetailJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Infra" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceUnit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bandwidth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IsFavourite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NMNStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LOB" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCiruitsMainDetailJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCiruitsMainDetailJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCircuitCompleteDetailJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignupID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCircuitCompleteDetailJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCircuitCompleteDetailJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewConnectionListJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewConnectionListJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewConnectionListJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConnectionHistoryJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignupID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConnectionHistoryJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetConnectionHistoryJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerMonthlyInvoicesJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BSSMasterCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="GPMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerMonthlyInvoicesJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerMonthlyInvoicesJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerProdutSummaryJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BSSMasterCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="GPMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerProdutSummaryJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerProdutSummaryJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerOutstandingJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BSSMasterCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="GPMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerOutstandingJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerOutstandingJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerInovicesJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GPMasterCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Period" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerInovicesJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerInovicesJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetFavCircuitJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignupID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetFavCircuitJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetFavCircuitJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUnFavCircuitJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignupID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUnFavCircuitJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetUnFavCircuitJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerFavJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerFavJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerFavJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvoiceDetailForPDFJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FROM_DATE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TO_DATE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SOPNUMBE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvoiceDetailForPDFJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInvoiceDetailForPDFJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetInitialStatmentsJSON">
+        <s:complexType />
+      </s:element>
+      <s:element name="BSS_GetInitialStatmentsJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSS_GetInitialStatmentsJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetComplainsJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSSMasterCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GPID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TicketNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetComplainsJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSS_GetComplainsJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetInternationalComplainsJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GPID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TicketNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetInternationalComplainsJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSS_GetInternationalComplainsJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_InsertComplainJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SignupID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitailStatementID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="PoCName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PoCNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Remarks" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_InsertComplainJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BSS_InsertComplainJSONResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_InsertComplainTroubleShootingJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ComplainID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastMilePowerStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FiberLEDStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceRebooted" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_InsertComplainTroubleShootingJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSS_InsertComplainTroubleShootingJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetComplainsByIDJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ComplaintID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetComplainsByIDJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSS_GetComplainsByIDJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_ClosedComplainJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ComplainID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ComplaintStatusID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerFeedBack" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FurtherAction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Remarks" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_ClosedComplainJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSS_ClosedComplainJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_InsertICSComplainJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignupID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ComplaintTypeID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LinkStatusID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Remarks" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_InsertICSComplainJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSS_InsertICSComplainJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetLinkStatusJSON">
+        <s:complexType />
+      </s:element>
+      <s:element name="BSS_GetLinkStatusJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSS_GetLinkStatusJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BSS_GetComplaintTypeJSON">
+        <s:complexType />
+      </s:element>
+      <s:element name="BSS_GetComplaintTypeJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BSS_GetComplaintTypeJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateNewLeadsJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Infra" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Poc_Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Poc_ContactNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Poc_Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceUnit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateNewLeadsJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateNewLeadsJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCustomerDetailsViaCallerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerDetailsViaCaller" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerDetailsViaCallerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerDetailsViaCallerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerDetailsViaCallerAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="Ldap_AuthenticationSoapIn">
+    <wsdl:part name="parameters" element="tns:Ldap_Authentication" />
+  </wsdl:message>
+  <wsdl:message name="Ldap_AuthenticationSoapOut">
+    <wsdl:part name="parameters" element="tns:Ldap_AuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ldap_AuthenticationAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="TC5_GETCUSTOMERCIRCUITSoapIn">
+    <wsdl:part name="parameters" element="tns:TC5_GETCUSTOMERCIRCUIT" />
+  </wsdl:message>
+  <wsdl:message name="TC5_GETCUSTOMERCIRCUITSoapOut">
+    <wsdl:part name="parameters" element="tns:TC5_GETCUSTOMERCIRCUITResponse" />
+  </wsdl:message>
+  <wsdl:message name="TC5_GETCUSTOMERCIRCUITAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="TC5_GETCUSTOMERMAINSoapIn">
+    <wsdl:part name="parameters" element="tns:TC5_GETCUSTOMERMAIN" />
+  </wsdl:message>
+  <wsdl:message name="TC5_GETCUSTOMERMAINSoapOut">
+    <wsdl:part name="parameters" element="tns:TC5_GETCUSTOMERMAINResponse" />
+  </wsdl:message>
+  <wsdl:message name="TC5_GETCUSTOMERMAINAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="TC5_GETINVOICESSoapIn">
+    <wsdl:part name="parameters" element="tns:TC5_GETINVOICES" />
+  </wsdl:message>
+  <wsdl:message name="TC5_GETINVOICESSoapOut">
+    <wsdl:part name="parameters" element="tns:TC5_GETINVOICESResponse" />
+  </wsdl:message>
+  <wsdl:message name="TC5_GETINVOICESAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="TC5_GETPAYMENTSSoapIn">
+    <wsdl:part name="parameters" element="tns:TC5_GETPAYMENTS" />
+  </wsdl:message>
+  <wsdl:message name="TC5_GETPAYMENTSSoapOut">
+    <wsdl:part name="parameters" element="tns:TC5_GETPAYMENTSResponse" />
+  </wsdl:message>
+  <wsdl:message name="TC5_GETPAYMENTSAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="CustomerCredentialSoapIn">
+    <wsdl:part name="parameters" element="tns:CustomerCredential" />
+  </wsdl:message>
+  <wsdl:message name="CustomerCredentialSoapOut">
+    <wsdl:part name="parameters" element="tns:CustomerCredentialResponse" />
+  </wsdl:message>
+  <wsdl:message name="CustomerCredentialAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetUserAccountAccessSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserAccountAccess" />
+  </wsdl:message>
+  <wsdl:message name="GetUserAccountAccessSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserAccountAccessResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserAccountAccessAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegion" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCitiesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCities" />
+  </wsdl:message>
+  <wsdl:message name="GetCitiesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCitiesAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetInfraSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInfra" />
+  </wsdl:message>
+  <wsdl:message name="GetInfraSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInfraResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInfraAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetLOBSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLOB" />
+  </wsdl:message>
+  <wsdl:message name="GetLOBSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLOBResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLOBAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceUnitSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceUnit" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceUnitSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceUnitResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceUnitAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetBandwidthSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBandwidth" />
+  </wsdl:message>
+  <wsdl:message name="GetBandwidthSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBandwidthResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBandwidthAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCiruitsMainDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCiruitsMainDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetCiruitsMainDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCiruitsMainDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCiruitsMainDetailAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCircuitCompleteDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCircuitCompleteDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetCircuitCompleteDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCircuitCompleteDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCircuitCompleteDetailAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetNewConnectionListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewConnectionList" />
+  </wsdl:message>
+  <wsdl:message name="GetNewConnectionListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewConnectionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewConnectionListAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetConnectionHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetConnectionHistory" />
+  </wsdl:message>
+  <wsdl:message name="GetConnectionHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetConnectionHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetConnectionHistoryAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerMonthlyInvoicesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerMonthlyInvoices" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerMonthlyInvoicesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerMonthlyInvoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerMonthlyInvoicesAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerProdutSummarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerProdutSummary" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerProdutSummarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerProdutSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerProdutSummaryAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerOutstandingSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerOutstanding" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerOutstandingSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerOutstandingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerOutstandingAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerInovicesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerInovices" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerInovicesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerInovicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerInovicesAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="SetFavCircuitSoapIn">
+    <wsdl:part name="parameters" element="tns:SetFavCircuit" />
+  </wsdl:message>
+  <wsdl:message name="SetFavCircuitSoapOut">
+    <wsdl:part name="parameters" element="tns:SetFavCircuitResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetFavCircuitAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="SetUnFavCircuitSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUnFavCircuit" />
+  </wsdl:message>
+  <wsdl:message name="SetUnFavCircuitSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUnFavCircuitResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUnFavCircuitAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerFavSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerFav" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerFavSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerFavResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerFavAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceDetailForPDFSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInvoiceDetailForPDF" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceDetailForPDFSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInvoiceDetailForPDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceDetailForPDFAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetInitialStatmentsSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_GetInitialStatments" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetInitialStatmentsSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_GetInitialStatmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetInitialStatmentsAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplainsSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_GetComplains" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplainsSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_GetComplainsResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplainsAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetinterComplainsDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_GetinterComplainsDetails" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetinterComplainsDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_GetinterComplainsDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetinterComplainsDetailsAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertComplainSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_InsertComplain" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertComplainSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_InsertComplainResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertComplainAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertComplainTroubleShootingSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_InsertComplainTroubleShooting" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertComplainTroubleShootingSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_InsertComplainTroubleShootingResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertComplainTroubleShootingAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplainsByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_GetComplainsByID" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplainsByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_GetComplainsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplainsByIDAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_ClosedComplainSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_ClosedComplain" />
+  </wsdl:message>
+  <wsdl:message name="BSS_ClosedComplainSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_ClosedComplainResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_ClosedComplainAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertICSComplainSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_InsertICSComplain" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertICSComplainSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_InsertICSComplainResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertICSComplainAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetLinkStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_GetLinkStatus" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetLinkStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_GetLinkStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetLinkStatusAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplaintTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_GetComplaintType" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplaintTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_GetComplaintTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplaintTypeAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="CreateNewLeadsSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateNewLeads" />
+  </wsdl:message>
+  <wsdl:message name="CreateNewLeadsSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateNewLeadsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateNewLeadsAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="CustomerCredentialJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:CustomerCredentialJSON" />
+  </wsdl:message>
+  <wsdl:message name="CustomerCredentialJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:CustomerCredentialJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="CustomerCredentialJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetUserAccountAccessJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserAccountAccessJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetUserAccountAccessJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserAccountAccessJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserAccountAccessJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegionJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegionJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCitiesJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCitiesJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetCitiesJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCitiesJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCitiesJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetInfraJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInfraJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetInfraJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInfraJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInfraJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetLOBJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLOBJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetLOBJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLOBJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLOBJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceUnitJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceUnitJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceUnitJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceUnitJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceUnitJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetBandwidthJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBandwidthJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetBandwidthJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBandwidthJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBandwidthJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCiruitsMainDetailJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCiruitsMainDetailJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetCiruitsMainDetailJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCiruitsMainDetailJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCiruitsMainDetailJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCircuitCompleteDetailJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCircuitCompleteDetailJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetCircuitCompleteDetailJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCircuitCompleteDetailJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCircuitCompleteDetailJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetNewConnectionListJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewConnectionListJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetNewConnectionListJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewConnectionListJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewConnectionListJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetConnectionHistoryJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConnectionHistoryJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetConnectionHistoryJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConnectionHistoryJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetConnectionHistoryJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerMonthlyInvoicesJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerMonthlyInvoicesJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerMonthlyInvoicesJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerMonthlyInvoicesJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerMonthlyInvoicesJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerProdutSummaryJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerProdutSummaryJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerProdutSummaryJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerProdutSummaryJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerProdutSummaryJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerOutstandingJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerOutstandingJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerOutstandingJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerOutstandingJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerOutstandingJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerInovicesJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerInovicesJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerInovicesJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerInovicesJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerInovicesJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="SetFavCircuitJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:SetFavCircuitJSON" />
+  </wsdl:message>
+  <wsdl:message name="SetFavCircuitJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:SetFavCircuitJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetFavCircuitJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="SetUnFavCircuitJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUnFavCircuitJSON" />
+  </wsdl:message>
+  <wsdl:message name="SetUnFavCircuitJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUnFavCircuitJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUnFavCircuitJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerFavJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerFavJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerFavJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerFavJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerFavJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceDetailForPDFJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInvoiceDetailForPDFJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceDetailForPDFJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInvoiceDetailForPDFJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceDetailForPDFJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetInitialStatmentsJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_GetInitialStatmentsJSON" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetInitialStatmentsJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_GetInitialStatmentsJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetInitialStatmentsJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplainsJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_GetComplainsJSON" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplainsJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_GetComplainsJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplainsJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetInternationalComplainsJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_GetInternationalComplainsJSON" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetInternationalComplainsJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_GetInternationalComplainsJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetInternationalComplainsJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertComplainJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_InsertComplainJSON" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertComplainJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_InsertComplainJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertComplainJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertComplainTroubleShootingJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_InsertComplainTroubleShootingJSON" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertComplainTroubleShootingJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_InsertComplainTroubleShootingJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertComplainTroubleShootingJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplainsByIDJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_GetComplainsByIDJSON" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplainsByIDJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_GetComplainsByIDJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplainsByIDJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_ClosedComplainJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_ClosedComplainJSON" />
+  </wsdl:message>
+  <wsdl:message name="BSS_ClosedComplainJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_ClosedComplainJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_ClosedComplainJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertICSComplainJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_InsertICSComplainJSON" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertICSComplainJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_InsertICSComplainJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_InsertICSComplainJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetLinkStatusJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_GetLinkStatusJSON" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetLinkStatusJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_GetLinkStatusJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetLinkStatusJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplaintTypeJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:BSS_GetComplaintTypeJSON" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplaintTypeJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:BSS_GetComplaintTypeJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="BSS_GetComplaintTypeJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:message name="CreateNewLeadsJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateNewLeadsJSON" />
+  </wsdl:message>
+  <wsdl:message name="CreateNewLeadsJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateNewLeadsJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateNewLeadsJSONAuthUser">
+    <wsdl:part name="AuthUser" element="tns:AuthUser" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="GetCustomerDetailsViaCaller">
+      <wsdl:input message="tns:GetCustomerDetailsViaCallerSoapIn" />
+      <wsdl:output message="tns:GetCustomerDetailsViaCallerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ldap_Authentication">
+      <wsdl:input message="tns:Ldap_AuthenticationSoapIn" />
+      <wsdl:output message="tns:Ldap_AuthenticationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TC5_GETCUSTOMERCIRCUIT">
+      <wsdl:input message="tns:TC5_GETCUSTOMERCIRCUITSoapIn" />
+      <wsdl:output message="tns:TC5_GETCUSTOMERCIRCUITSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TC5_GETCUSTOMERMAIN">
+      <wsdl:input message="tns:TC5_GETCUSTOMERMAINSoapIn" />
+      <wsdl:output message="tns:TC5_GETCUSTOMERMAINSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TC5_GETINVOICES">
+      <wsdl:input message="tns:TC5_GETINVOICESSoapIn" />
+      <wsdl:output message="tns:TC5_GETINVOICESSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TC5_GETPAYMENTS">
+      <wsdl:input message="tns:TC5_GETPAYMENTSSoapIn" />
+      <wsdl:output message="tns:TC5_GETPAYMENTSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomerCredential">
+      <wsdl:input message="tns:CustomerCredentialSoapIn" />
+      <wsdl:output message="tns:CustomerCredentialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccountAccess">
+      <wsdl:input message="tns:GetUserAccountAccessSoapIn" />
+      <wsdl:output message="tns:GetUserAccountAccessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <wsdl:input message="tns:GetRegionSoapIn" />
+      <wsdl:output message="tns:GetRegionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <wsdl:input message="tns:GetCitiesSoapIn" />
+      <wsdl:output message="tns:GetCitiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfra">
+      <wsdl:input message="tns:GetInfraSoapIn" />
+      <wsdl:output message="tns:GetInfraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOB">
+      <wsdl:input message="tns:GetLOBSoapIn" />
+      <wsdl:output message="tns:GetLOBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceUnit">
+      <wsdl:input message="tns:GetServiceUnitSoapIn" />
+      <wsdl:output message="tns:GetServiceUnitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBandwidth">
+      <wsdl:input message="tns:GetBandwidthSoapIn" />
+      <wsdl:output message="tns:GetBandwidthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCiruitsMainDetail">
+      <wsdl:input message="tns:GetCiruitsMainDetailSoapIn" />
+      <wsdl:output message="tns:GetCiruitsMainDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCircuitCompleteDetail">
+      <wsdl:input message="tns:GetCircuitCompleteDetailSoapIn" />
+      <wsdl:output message="tns:GetCircuitCompleteDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewConnectionList">
+      <wsdl:input message="tns:GetNewConnectionListSoapIn" />
+      <wsdl:output message="tns:GetNewConnectionListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectionHistory">
+      <wsdl:input message="tns:GetConnectionHistorySoapIn" />
+      <wsdl:output message="tns:GetConnectionHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerMonthlyInvoices">
+      <wsdl:input message="tns:GetCustomerMonthlyInvoicesSoapIn" />
+      <wsdl:output message="tns:GetCustomerMonthlyInvoicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerProdutSummary">
+      <wsdl:input message="tns:GetCustomerProdutSummarySoapIn" />
+      <wsdl:output message="tns:GetCustomerProdutSummarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerOutstanding">
+      <wsdl:input message="tns:GetCustomerOutstandingSoapIn" />
+      <wsdl:output message="tns:GetCustomerOutstandingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInovices">
+      <wsdl:input message="tns:GetCustomerInovicesSoapIn" />
+      <wsdl:output message="tns:GetCustomerInovicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetFavCircuit">
+      <wsdl:input message="tns:SetFavCircuitSoapIn" />
+      <wsdl:output message="tns:SetFavCircuitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUnFavCircuit">
+      <wsdl:input message="tns:SetUnFavCircuitSoapIn" />
+      <wsdl:output message="tns:SetUnFavCircuitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerFav">
+      <wsdl:input message="tns:GetCustomerFavSoapIn" />
+      <wsdl:output message="tns:GetCustomerFavSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceDetailForPDF">
+      <wsdl:input message="tns:GetInvoiceDetailForPDFSoapIn" />
+      <wsdl:output message="tns:GetInvoiceDetailForPDFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetInitialStatments">
+      <wsdl:input message="tns:BSS_GetInitialStatmentsSoapIn" />
+      <wsdl:output message="tns:BSS_GetInitialStatmentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplains">
+      <wsdl:input message="tns:BSS_GetComplainsSoapIn" />
+      <wsdl:output message="tns:BSS_GetComplainsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetinterComplainsDetails">
+      <wsdl:input message="tns:BSS_GetinterComplainsDetailsSoapIn" />
+      <wsdl:output message="tns:BSS_GetinterComplainsDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertComplain">
+      <wsdl:input message="tns:BSS_InsertComplainSoapIn" />
+      <wsdl:output message="tns:BSS_InsertComplainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertComplainTroubleShooting">
+      <wsdl:input message="tns:BSS_InsertComplainTroubleShootingSoapIn" />
+      <wsdl:output message="tns:BSS_InsertComplainTroubleShootingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplainsByID">
+      <wsdl:input message="tns:BSS_GetComplainsByIDSoapIn" />
+      <wsdl:output message="tns:BSS_GetComplainsByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_ClosedComplain">
+      <wsdl:input message="tns:BSS_ClosedComplainSoapIn" />
+      <wsdl:output message="tns:BSS_ClosedComplainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertICSComplain">
+      <wsdl:input message="tns:BSS_InsertICSComplainSoapIn" />
+      <wsdl:output message="tns:BSS_InsertICSComplainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetLinkStatus">
+      <wsdl:input message="tns:BSS_GetLinkStatusSoapIn" />
+      <wsdl:output message="tns:BSS_GetLinkStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplaintType">
+      <wsdl:input message="tns:BSS_GetComplaintTypeSoapIn" />
+      <wsdl:output message="tns:BSS_GetComplaintTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewLeads">
+      <wsdl:input message="tns:CreateNewLeadsSoapIn" />
+      <wsdl:output message="tns:CreateNewLeadsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomerCredentialJSON">
+      <wsdl:input message="tns:CustomerCredentialJSONSoapIn" />
+      <wsdl:output message="tns:CustomerCredentialJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccountAccessJSON">
+      <wsdl:input message="tns:GetUserAccountAccessJSONSoapIn" />
+      <wsdl:output message="tns:GetUserAccountAccessJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionJSON">
+      <wsdl:input message="tns:GetRegionJSONSoapIn" />
+      <wsdl:output message="tns:GetRegionJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesJSON">
+      <wsdl:input message="tns:GetCitiesJSONSoapIn" />
+      <wsdl:output message="tns:GetCitiesJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfraJSON">
+      <wsdl:input message="tns:GetInfraJSONSoapIn" />
+      <wsdl:output message="tns:GetInfraJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOBJSON">
+      <wsdl:input message="tns:GetLOBJSONSoapIn" />
+      <wsdl:output message="tns:GetLOBJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceUnitJSON">
+      <wsdl:input message="tns:GetServiceUnitJSONSoapIn" />
+      <wsdl:output message="tns:GetServiceUnitJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBandwidthJSON">
+      <wsdl:input message="tns:GetBandwidthJSONSoapIn" />
+      <wsdl:output message="tns:GetBandwidthJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCiruitsMainDetailJSON">
+      <wsdl:input message="tns:GetCiruitsMainDetailJSONSoapIn" />
+      <wsdl:output message="tns:GetCiruitsMainDetailJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCircuitCompleteDetailJSON">
+      <wsdl:input message="tns:GetCircuitCompleteDetailJSONSoapIn" />
+      <wsdl:output message="tns:GetCircuitCompleteDetailJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewConnectionListJSON">
+      <wsdl:input message="tns:GetNewConnectionListJSONSoapIn" />
+      <wsdl:output message="tns:GetNewConnectionListJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectionHistoryJSON">
+      <wsdl:input message="tns:GetConnectionHistoryJSONSoapIn" />
+      <wsdl:output message="tns:GetConnectionHistoryJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerMonthlyInvoicesJSON">
+      <wsdl:input message="tns:GetCustomerMonthlyInvoicesJSONSoapIn" />
+      <wsdl:output message="tns:GetCustomerMonthlyInvoicesJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerProdutSummaryJSON">
+      <wsdl:input message="tns:GetCustomerProdutSummaryJSONSoapIn" />
+      <wsdl:output message="tns:GetCustomerProdutSummaryJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerOutstandingJSON">
+      <wsdl:input message="tns:GetCustomerOutstandingJSONSoapIn" />
+      <wsdl:output message="tns:GetCustomerOutstandingJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInovicesJSON">
+      <wsdl:input message="tns:GetCustomerInovicesJSONSoapIn" />
+      <wsdl:output message="tns:GetCustomerInovicesJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetFavCircuitJSON">
+      <wsdl:input message="tns:SetFavCircuitJSONSoapIn" />
+      <wsdl:output message="tns:SetFavCircuitJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUnFavCircuitJSON">
+      <wsdl:input message="tns:SetUnFavCircuitJSONSoapIn" />
+      <wsdl:output message="tns:SetUnFavCircuitJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerFavJSON">
+      <wsdl:input message="tns:GetCustomerFavJSONSoapIn" />
+      <wsdl:output message="tns:GetCustomerFavJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceDetailForPDFJSON">
+      <wsdl:input message="tns:GetInvoiceDetailForPDFJSONSoapIn" />
+      <wsdl:output message="tns:GetInvoiceDetailForPDFJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetInitialStatmentsJSON">
+      <wsdl:input message="tns:BSS_GetInitialStatmentsJSONSoapIn" />
+      <wsdl:output message="tns:BSS_GetInitialStatmentsJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplainsJSON">
+      <wsdl:input message="tns:BSS_GetComplainsJSONSoapIn" />
+      <wsdl:output message="tns:BSS_GetComplainsJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetInternationalComplainsJSON">
+      <wsdl:input message="tns:BSS_GetInternationalComplainsJSONSoapIn" />
+      <wsdl:output message="tns:BSS_GetInternationalComplainsJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertComplainJSON">
+      <wsdl:input message="tns:BSS_InsertComplainJSONSoapIn" />
+      <wsdl:output message="tns:BSS_InsertComplainJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertComplainTroubleShootingJSON">
+      <wsdl:input message="tns:BSS_InsertComplainTroubleShootingJSONSoapIn" />
+      <wsdl:output message="tns:BSS_InsertComplainTroubleShootingJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplainsByIDJSON">
+      <wsdl:input message="tns:BSS_GetComplainsByIDJSONSoapIn" />
+      <wsdl:output message="tns:BSS_GetComplainsByIDJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_ClosedComplainJSON">
+      <wsdl:input message="tns:BSS_ClosedComplainJSONSoapIn" />
+      <wsdl:output message="tns:BSS_ClosedComplainJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertICSComplainJSON">
+      <wsdl:input message="tns:BSS_InsertICSComplainJSONSoapIn" />
+      <wsdl:output message="tns:BSS_InsertICSComplainJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetLinkStatusJSON">
+      <wsdl:input message="tns:BSS_GetLinkStatusJSONSoapIn" />
+      <wsdl:output message="tns:BSS_GetLinkStatusJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplaintTypeJSON">
+      <wsdl:input message="tns:BSS_GetComplaintTypeJSONSoapIn" />
+      <wsdl:output message="tns:BSS_GetComplaintTypeJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewLeadsJSON">
+      <wsdl:input message="tns:CreateNewLeadsJSONSoapIn" />
+      <wsdl:output message="tns:CreateNewLeadsJSONSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCustomerDetailsViaCaller">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerDetailsViaCaller" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCustomerDetailsViaCallerAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ldap_Authentication">
+      <soap:operation soapAction="http://tempuri.org/Ldap_Authentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Ldap_AuthenticationAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TC5_GETCUSTOMERCIRCUIT">
+      <soap:operation soapAction="http://tempuri.org/TC5_GETCUSTOMERCIRCUIT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TC5_GETCUSTOMERCIRCUITAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TC5_GETCUSTOMERMAIN">
+      <soap:operation soapAction="http://tempuri.org/TC5_GETCUSTOMERMAIN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TC5_GETCUSTOMERMAINAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TC5_GETINVOICES">
+      <soap:operation soapAction="http://tempuri.org/TC5_GETINVOICES" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TC5_GETINVOICESAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TC5_GETPAYMENTS">
+      <soap:operation soapAction="http://tempuri.org/TC5_GETPAYMENTS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TC5_GETPAYMENTSAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerCredential">
+      <soap:operation soapAction="http://tempuri.org/CustomerCredential" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CustomerCredentialAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccountAccess">
+      <soap:operation soapAction="http://tempuri.org/GetUserAccountAccess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUserAccountAccessAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <soap:operation soapAction="http://tempuri.org/GetRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetRegionAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <soap:operation soapAction="http://tempuri.org/GetCities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCitiesAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfra">
+      <soap:operation soapAction="http://tempuri.org/GetInfra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetInfraAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOB">
+      <soap:operation soapAction="http://tempuri.org/GetLOB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetLOBAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceUnit">
+      <soap:operation soapAction="http://tempuri.org/GetServiceUnit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetServiceUnitAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBandwidth">
+      <soap:operation soapAction="http://tempuri.org/GetBandwidth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBandwidthAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCiruitsMainDetail">
+      <soap:operation soapAction="http://tempuri.org/GetCiruitsMainDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCiruitsMainDetailAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCircuitCompleteDetail">
+      <soap:operation soapAction="http://tempuri.org/GetCircuitCompleteDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCircuitCompleteDetailAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewConnectionList">
+      <soap:operation soapAction="http://tempuri.org/GetNewConnectionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetNewConnectionListAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectionHistory">
+      <soap:operation soapAction="http://tempuri.org/GetConnectionHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetConnectionHistoryAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerMonthlyInvoices">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerMonthlyInvoices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCustomerMonthlyInvoicesAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerProdutSummary">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerProdutSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCustomerProdutSummaryAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerOutstanding">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerOutstanding" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCustomerOutstandingAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInovices">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerInovices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCustomerInovicesAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFavCircuit">
+      <soap:operation soapAction="http://tempuri.org/SetFavCircuit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SetFavCircuitAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUnFavCircuit">
+      <soap:operation soapAction="http://tempuri.org/SetUnFavCircuit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SetUnFavCircuitAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerFav">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerFav" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCustomerFavAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceDetailForPDF">
+      <soap:operation soapAction="http://tempuri.org/GetInvoiceDetailForPDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetInvoiceDetailForPDFAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetInitialStatments">
+      <soap:operation soapAction="http://tempuri.org/BSS_GetInitialStatments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_GetInitialStatmentsAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplains">
+      <soap:operation soapAction="http://tempuri.org/BSS_GetComplains" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_GetComplainsAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetinterComplainsDetails">
+      <soap:operation soapAction="http://tempuri.org/BSS_GetinterComplainsDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_GetinterComplainsDetailsAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertComplain">
+      <soap:operation soapAction="http://tempuri.org/BSS_InsertComplain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_InsertComplainAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertComplainTroubleShooting">
+      <soap:operation soapAction="http://tempuri.org/BSS_InsertComplainTroubleShooting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_InsertComplainTroubleShootingAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplainsByID">
+      <soap:operation soapAction="http://tempuri.org/BSS_GetComplainsByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_GetComplainsByIDAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_ClosedComplain">
+      <soap:operation soapAction="http://tempuri.org/BSS_ClosedComplain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_ClosedComplainAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertICSComplain">
+      <soap:operation soapAction="http://tempuri.org/BSS_InsertICSComplain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_InsertICSComplainAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetLinkStatus">
+      <soap:operation soapAction="http://tempuri.org/BSS_GetLinkStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_GetLinkStatusAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplaintType">
+      <soap:operation soapAction="http://tempuri.org/BSS_GetComplaintType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_GetComplaintTypeAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewLeads">
+      <soap:operation soapAction="http://tempuri.org/CreateNewLeads" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CreateNewLeadsAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerCredentialJSON">
+      <soap:operation soapAction="http://tempuri.org/CustomerCredentialJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CustomerCredentialJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccountAccessJSON">
+      <soap:operation soapAction="http://tempuri.org/GetUserAccountAccessJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUserAccountAccessJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionJSON">
+      <soap:operation soapAction="http://tempuri.org/GetRegionJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetRegionJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesJSON">
+      <soap:operation soapAction="http://tempuri.org/GetCitiesJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCitiesJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfraJSON">
+      <soap:operation soapAction="http://tempuri.org/GetInfraJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetInfraJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOBJSON">
+      <soap:operation soapAction="http://tempuri.org/GetLOBJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetLOBJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceUnitJSON">
+      <soap:operation soapAction="http://tempuri.org/GetServiceUnitJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetServiceUnitJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBandwidthJSON">
+      <soap:operation soapAction="http://tempuri.org/GetBandwidthJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBandwidthJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCiruitsMainDetailJSON">
+      <soap:operation soapAction="http://tempuri.org/GetCiruitsMainDetailJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCiruitsMainDetailJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCircuitCompleteDetailJSON">
+      <soap:operation soapAction="http://tempuri.org/GetCircuitCompleteDetailJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCircuitCompleteDetailJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewConnectionListJSON">
+      <soap:operation soapAction="http://tempuri.org/GetNewConnectionListJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetNewConnectionListJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectionHistoryJSON">
+      <soap:operation soapAction="http://tempuri.org/GetConnectionHistoryJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetConnectionHistoryJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerMonthlyInvoicesJSON">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerMonthlyInvoicesJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCustomerMonthlyInvoicesJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerProdutSummaryJSON">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerProdutSummaryJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCustomerProdutSummaryJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerOutstandingJSON">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerOutstandingJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCustomerOutstandingJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInovicesJSON">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerInovicesJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCustomerInovicesJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFavCircuitJSON">
+      <soap:operation soapAction="http://tempuri.org/SetFavCircuitJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SetFavCircuitJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUnFavCircuitJSON">
+      <soap:operation soapAction="http://tempuri.org/SetUnFavCircuitJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SetUnFavCircuitJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerFavJSON">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerFavJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCustomerFavJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceDetailForPDFJSON">
+      <soap:operation soapAction="http://tempuri.org/GetInvoiceDetailForPDFJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetInvoiceDetailForPDFJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetInitialStatmentsJSON">
+      <soap:operation soapAction="http://tempuri.org/BSS_GetInitialStatmentsJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_GetInitialStatmentsJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplainsJSON">
+      <soap:operation soapAction="http://tempuri.org/BSS_GetComplainsJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_GetComplainsJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetInternationalComplainsJSON">
+      <soap:operation soapAction="http://tempuri.org/BSS_GetInternationalComplainsJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_GetInternationalComplainsJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertComplainJSON">
+      <soap:operation soapAction="http://tempuri.org/BSS_InsertComplainJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_InsertComplainJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertComplainTroubleShootingJSON">
+      <soap:operation soapAction="http://tempuri.org/BSS_InsertComplainTroubleShootingJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_InsertComplainTroubleShootingJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplainsByIDJSON">
+      <soap:operation soapAction="http://tempuri.org/BSS_GetComplainsByIDJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_GetComplainsByIDJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_ClosedComplainJSON">
+      <soap:operation soapAction="http://tempuri.org/BSS_ClosedComplainJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_ClosedComplainJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertICSComplainJSON">
+      <soap:operation soapAction="http://tempuri.org/BSS_InsertICSComplainJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_InsertICSComplainJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetLinkStatusJSON">
+      <soap:operation soapAction="http://tempuri.org/BSS_GetLinkStatusJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_GetLinkStatusJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplaintTypeJSON">
+      <soap:operation soapAction="http://tempuri.org/BSS_GetComplaintTypeJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BSS_GetComplaintTypeJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewLeadsJSON">
+      <soap:operation soapAction="http://tempuri.org/CreateNewLeadsJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CreateNewLeadsJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCustomerDetailsViaCaller">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerDetailsViaCaller" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCustomerDetailsViaCallerAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ldap_Authentication">
+      <soap12:operation soapAction="http://tempuri.org/Ldap_Authentication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Ldap_AuthenticationAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TC5_GETCUSTOMERCIRCUIT">
+      <soap12:operation soapAction="http://tempuri.org/TC5_GETCUSTOMERCIRCUIT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:TC5_GETCUSTOMERCIRCUITAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TC5_GETCUSTOMERMAIN">
+      <soap12:operation soapAction="http://tempuri.org/TC5_GETCUSTOMERMAIN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:TC5_GETCUSTOMERMAINAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TC5_GETINVOICES">
+      <soap12:operation soapAction="http://tempuri.org/TC5_GETINVOICES" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:TC5_GETINVOICESAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TC5_GETPAYMENTS">
+      <soap12:operation soapAction="http://tempuri.org/TC5_GETPAYMENTS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:TC5_GETPAYMENTSAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerCredential">
+      <soap12:operation soapAction="http://tempuri.org/CustomerCredential" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CustomerCredentialAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccountAccess">
+      <soap12:operation soapAction="http://tempuri.org/GetUserAccountAccess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUserAccountAccessAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <soap12:operation soapAction="http://tempuri.org/GetRegion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetRegionAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <soap12:operation soapAction="http://tempuri.org/GetCities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCitiesAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfra">
+      <soap12:operation soapAction="http://tempuri.org/GetInfra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetInfraAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOB">
+      <soap12:operation soapAction="http://tempuri.org/GetLOB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetLOBAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceUnit">
+      <soap12:operation soapAction="http://tempuri.org/GetServiceUnit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetServiceUnitAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBandwidth">
+      <soap12:operation soapAction="http://tempuri.org/GetBandwidth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBandwidthAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCiruitsMainDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetCiruitsMainDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCiruitsMainDetailAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCircuitCompleteDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetCircuitCompleteDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCircuitCompleteDetailAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewConnectionList">
+      <soap12:operation soapAction="http://tempuri.org/GetNewConnectionList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetNewConnectionListAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectionHistory">
+      <soap12:operation soapAction="http://tempuri.org/GetConnectionHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetConnectionHistoryAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerMonthlyInvoices">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerMonthlyInvoices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCustomerMonthlyInvoicesAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerProdutSummary">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerProdutSummary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCustomerProdutSummaryAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerOutstanding">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerOutstanding" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCustomerOutstandingAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInovices">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerInovices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCustomerInovicesAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFavCircuit">
+      <soap12:operation soapAction="http://tempuri.org/SetFavCircuit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SetFavCircuitAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUnFavCircuit">
+      <soap12:operation soapAction="http://tempuri.org/SetUnFavCircuit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SetUnFavCircuitAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerFav">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerFav" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCustomerFavAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceDetailForPDF">
+      <soap12:operation soapAction="http://tempuri.org/GetInvoiceDetailForPDF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetInvoiceDetailForPDFAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetInitialStatments">
+      <soap12:operation soapAction="http://tempuri.org/BSS_GetInitialStatments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_GetInitialStatmentsAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplains">
+      <soap12:operation soapAction="http://tempuri.org/BSS_GetComplains" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_GetComplainsAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetinterComplainsDetails">
+      <soap12:operation soapAction="http://tempuri.org/BSS_GetinterComplainsDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_GetinterComplainsDetailsAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertComplain">
+      <soap12:operation soapAction="http://tempuri.org/BSS_InsertComplain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_InsertComplainAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertComplainTroubleShooting">
+      <soap12:operation soapAction="http://tempuri.org/BSS_InsertComplainTroubleShooting" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_InsertComplainTroubleShootingAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplainsByID">
+      <soap12:operation soapAction="http://tempuri.org/BSS_GetComplainsByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_GetComplainsByIDAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_ClosedComplain">
+      <soap12:operation soapAction="http://tempuri.org/BSS_ClosedComplain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_ClosedComplainAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertICSComplain">
+      <soap12:operation soapAction="http://tempuri.org/BSS_InsertICSComplain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_InsertICSComplainAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetLinkStatus">
+      <soap12:operation soapAction="http://tempuri.org/BSS_GetLinkStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_GetLinkStatusAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplaintType">
+      <soap12:operation soapAction="http://tempuri.org/BSS_GetComplaintType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_GetComplaintTypeAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewLeads">
+      <soap12:operation soapAction="http://tempuri.org/CreateNewLeads" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CreateNewLeadsAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerCredentialJSON">
+      <soap12:operation soapAction="http://tempuri.org/CustomerCredentialJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CustomerCredentialJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccountAccessJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetUserAccountAccessJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUserAccountAccessJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetRegionJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetRegionJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitiesJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetCitiesJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCitiesJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfraJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetInfraJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetInfraJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOBJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetLOBJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetLOBJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceUnitJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetServiceUnitJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetServiceUnitJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBandwidthJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetBandwidthJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBandwidthJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCiruitsMainDetailJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetCiruitsMainDetailJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCiruitsMainDetailJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCircuitCompleteDetailJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetCircuitCompleteDetailJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCircuitCompleteDetailJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewConnectionListJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetNewConnectionListJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetNewConnectionListJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectionHistoryJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetConnectionHistoryJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetConnectionHistoryJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerMonthlyInvoicesJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerMonthlyInvoicesJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCustomerMonthlyInvoicesJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerProdutSummaryJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerProdutSummaryJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCustomerProdutSummaryJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerOutstandingJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerOutstandingJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCustomerOutstandingJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerInovicesJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerInovicesJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCustomerInovicesJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFavCircuitJSON">
+      <soap12:operation soapAction="http://tempuri.org/SetFavCircuitJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SetFavCircuitJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUnFavCircuitJSON">
+      <soap12:operation soapAction="http://tempuri.org/SetUnFavCircuitJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SetUnFavCircuitJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerFavJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerFavJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCustomerFavJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceDetailForPDFJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetInvoiceDetailForPDFJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetInvoiceDetailForPDFJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetInitialStatmentsJSON">
+      <soap12:operation soapAction="http://tempuri.org/BSS_GetInitialStatmentsJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_GetInitialStatmentsJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplainsJSON">
+      <soap12:operation soapAction="http://tempuri.org/BSS_GetComplainsJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_GetComplainsJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetInternationalComplainsJSON">
+      <soap12:operation soapAction="http://tempuri.org/BSS_GetInternationalComplainsJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_GetInternationalComplainsJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertComplainJSON">
+      <soap12:operation soapAction="http://tempuri.org/BSS_InsertComplainJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_InsertComplainJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertComplainTroubleShootingJSON">
+      <soap12:operation soapAction="http://tempuri.org/BSS_InsertComplainTroubleShootingJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_InsertComplainTroubleShootingJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplainsByIDJSON">
+      <soap12:operation soapAction="http://tempuri.org/BSS_GetComplainsByIDJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_GetComplainsByIDJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_ClosedComplainJSON">
+      <soap12:operation soapAction="http://tempuri.org/BSS_ClosedComplainJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_ClosedComplainJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_InsertICSComplainJSON">
+      <soap12:operation soapAction="http://tempuri.org/BSS_InsertICSComplainJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_InsertICSComplainJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetLinkStatusJSON">
+      <soap12:operation soapAction="http://tempuri.org/BSS_GetLinkStatusJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_GetLinkStatusJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BSS_GetComplaintTypeJSON">
+      <soap12:operation soapAction="http://tempuri.org/BSS_GetComplaintTypeJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BSS_GetComplaintTypeJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewLeadsJSON">
+      <soap12:operation soapAction="http://tempuri.org/CreateNewLeadsJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CreateNewLeadsJSONAuthUser" part="AuthUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://api.apps.multinet.com.pk/mpplService/webService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://api.apps.multinet.com.pk/mpplService/webService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
